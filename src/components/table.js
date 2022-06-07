@@ -37,6 +37,7 @@ const Table = () => {
         pagesArray.push(i + 2);
       }
       maxPage = Math.ceil(pagesArray.length / MAX_PAGE_NUMBER);
+      maxPage = maxPage === 0 ? 1 : maxPage;
       setValues({
         ...values,
         totalPages: length,
